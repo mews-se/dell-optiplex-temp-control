@@ -5,7 +5,7 @@ Fancontrol and/or i8kmon isn't a sure way of making sure that the fans aren't de
 How-to:
 
 ```
-apt install i8kutils lm-sensors
+apt install i8kutils lm-sensors acpi
 ```
 
 edit /etc/modules to contain:
