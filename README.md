@@ -33,6 +33,6 @@ systemctl start tempcontrol.service
 Check status with systemctl status tempcontrol.service
 Check sensors to make sure that fan speed and temperature is showing correctly
 
-OPTIONAL: To also disable Dell's bios fan control use [this](https://github.com/TomFreudenberg/dell-bios-fan-control)
+OPTIONAL: To also disable Dell's bios fan control use [this](https://github.com/mews-se/dell-bios-fan-control)
 
 Credits: [Tom Freudenberg](https://github.com/TomFreudenberg), [Ronny Svedman](https://github.com/RonnySvedman)
