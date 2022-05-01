@@ -1,0 +1,10 @@
+[Unit]
+Description= tempcontrol for buggy dells
+
+[Service]
+Type = simple
+Restart=always
+ExecStart= /usr/local/bin/tempcontrol.sh
+
+[Install]
+WantedBy=multi-user.target
