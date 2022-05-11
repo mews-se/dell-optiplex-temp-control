@@ -1,4 +1,4 @@
-# dell-optiplex-temp-control
+# Dell Optiplex temperature and fan control
 Many of Dell Optiplex has no way of controlling fan speed in certain distros of Linux. This is a good enough work around.
 Fancontrol and/or i8kmon isn't a sure way of making sure that the fans aren't dead or at full blast. This is a crude solve.
 
