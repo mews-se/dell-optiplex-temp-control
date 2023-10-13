@@ -8,29 +8,29 @@ How-to:
 apt install i8kutils lm-sensors acpi
 ```
 
-edit /etc/modules to contain:
+edit ```/etc/modules``` to contain:
 ```
 coretemp
 i8k
 dell-smm-hwmon
 ```
 
-edit /etc/modprobe.d/i8k.conf to contain:
+edit ```/etc/modprobe.d/i8k.conf``` to contain:
 ```
 options i8k force=1
 ```
 
 reboot
 
-Move tempcontrol.sh to /usr/local/bin/ and make sure it's executable (chmod +x)
-Move tempcontrol.service to /etc/systemd/system/
+Move tempcontrol.sh to ```/usr/local/bin/``` and make sure it's executable (chmod +x)
+Move tempcontrol.service to ```/etc/systemd/system/```
 
 ```
 systemctl enable tempcontrol.service
 systemctl start tempcontrol.service
 ```
 
-Check status with systemctl status tempcontrol.service
+Check status with ```systemctl status tempcontrol.service```
 Check sensors to make sure that fan speed and temperature is showing correctly
 
 OPTIONAL: To also disable Dell's bios fan control use [this](https://github.com/mews-se/dell-bios-fan-control)
@@ -40,13 +40,13 @@ Credits: [Tom Freudenberg](https://github.com/TomFreudenberg), [Ronny Svedman](h
 
 # For some reason you can trick Fancontrol to work on some versions of the Optiplex family
 
-Keep /etc/modules as above
+Keep ```/etc/modules``` as above
 
 Don't use the i8k config but instead add this to /etc/modprobe.d/dell-smm-hwmon
 ```
 options dell-smm-hwmon ignore_dmi=1
 ```
 
-Run sensors-detect and then pwm-config and if you're lucky you have a functioning fancontrol
+Run ```sensors-detect``` and then ```pwmconfig``` and if you're lucky you have a functioning fancontrol
 
 Reboot
