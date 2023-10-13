@@ -36,3 +36,17 @@ Check sensors to make sure that fan speed and temperature is showing correctly
 OPTIONAL: To also disable Dell's bios fan control use [this](https://github.com/mews-se/dell-bios-fan-control)
 
 Credits: [Tom Freudenberg](https://github.com/TomFreudenberg), [Ronny Svedman](https://github.com/RonnySvedman)
+
+
+# For some reason you can trick Fancontrol to work on some versions of the Optiplex family
+
+Keep /etc/modules as above
+
+Don't use the i8k config but instead add this to /etc/modprobe.d/dell-smm-hwmon
+```
+options dell-smm-hwmon ignore_dmi=1
+```
+
+Run sensors-detect and then pwm-config and if you're lucky you have a functioning fancontrol
+
+Reboot
