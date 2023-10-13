@@ -12,7 +12,7 @@ edit /etc/modules to contain:
 ```
 coretemp
 i8k
-dell=smm-hwmon
+dell-smm-hwmon
 ```
 
 edit /etc/modprobe.d/i8k.conf to contain:
